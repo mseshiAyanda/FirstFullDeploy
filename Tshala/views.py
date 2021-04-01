@@ -153,3 +153,14 @@ def checkout(request, pk):
 
 
 
+
+
+
+
+
+
+
+
+
+def index(request):
+    return HttpResponse('Done')
