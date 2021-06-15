@@ -22,6 +22,8 @@ from .validators import file_size
 from django.views.decorators.csrf import csrf_exempt
 @csrf_exempt
 
+
+
 def register(request):
     if request.user.is_authenticated:
         return redirect('Tshala:home')
