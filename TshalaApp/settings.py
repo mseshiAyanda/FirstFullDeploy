@@ -26,7 +26,7 @@ SECRET_KEY = 'c#ki#ssctqwauz^sxpfw@1=a(#*+*wd87@%8lf^1$4p2di0yxk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mseshi-2.azurewebsites.net', '127.0.0.1']
 
 
 # Application definition
@@ -88,7 +88,8 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '5000',
     }
-}
+}    
+
 
 
 # Password validation
@@ -134,6 +135,10 @@ MEDIA_ROOT=os.path.join(BASE_DIR,"media/")
 LOGIN_REDIRECT = '/account/'
 LOGIN_URL = '/login'
 LOGOUT_URL = '/logout'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
 
