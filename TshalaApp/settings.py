@@ -26,7 +26,7 @@ SECRET_KEY = 'c#ki#ssctqwauz^sxpfw@1=a(#*+*wd87@%8lf^1$4p2di0yxk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mseshi-2.azurewebsites.net', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
