@@ -26,7 +26,7 @@ SECRET_KEY = 'c#ki#ssctqwauz^sxpfw@1=a(#*+*wd87@%8lf^1$4p2di0yxk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['msomi.azurewebsites.net']
 
 
 # Application definition
@@ -78,31 +78,32 @@ WSGI_APPLICATION = 'TshalaApp.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 
-DATABASES = {
+#DATABASES = {
 
-'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ayanda',
-        'USER': 'postgres',
-        'PASSWORD': 'Amd!1998',
-        'HOST': 'localhost',
-        'PORT': '5000',
-    }
-}   
+#'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+ #       'NAME': 'ayanda',
+ #       'USER': 'postgres',
+ #       'PASSWORD': 'Amd!1998',
+ 
+#       'HOST': 'localhost',
+ #       'PORT': '5000',
+ #   }
+#}   
 
-#hostname = os.environ['mgabadeli']
+hostname = os.environ['mgabadeli']
 
 # Configure Postgres database; the full username is username@servername,
 # which we construct using the DBHOST value.
-#DATABASES = {
-#    'default': {
- #       'ENGINE': 'django.db.backends.postgresql',
- #       'NAME': os.environ['tshaladb'],
- #       'HOST': hostname + ".postgres.database.azure.com",
-  #      'USER': os.environ['mseshi'] + "@" + hostname,
- #       'PASSWORD': os.environ['Amd@1998'] 
- #   }
-#}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ['tshaladb'],
+        'HOST': hostname + ".postgres.database.azure.com",
+        'USER': os.environ['mseshi'] + "@" + hostname,
+        'PASSWORD': os.environ['Amd@1998'] 
+    }
+}
 
 
 
