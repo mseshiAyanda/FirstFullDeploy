@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'msomi'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B9AC07739FE64C30B0D96D80CFA1CC95 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_75F244B19B22477CB12D54E8F2F78C05 }}
