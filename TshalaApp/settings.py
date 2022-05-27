@@ -26,7 +26,7 @@ SECRET_KEY = 'c#ki#ssctqwauz^sxpfw@1=a(#*+*wd87@%8lf^1$4p2di0yxk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -91,17 +91,13 @@ WSGI_APPLICATION = 'TshalaApp.wsgi.application'
  #   }
 #}   
 
-hostname = os.environ['mgabadeli']
 
 # Configure Postgres database; the full username is username@servername,
 # which we construct using the DBHOST value.
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ['tshaladb'],
-        'HOST': hostname + ".postgres.database.azure.com",
-        'USER': os.environ['mseshi'] + "@" + hostname,
-        'PASSWORD': os.environ['Amd@1998'] 
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -153,7 +149,7 @@ LOGOUT_URL = '/logout'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / 'staticfiles' 
 
 
 
